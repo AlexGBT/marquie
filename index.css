@@ -1,0 +1,97 @@
+/* .outer{
+    border: 4px dotted black;
+    width:  50%;
+    height: 150px;
+    margin: auto;
+  }  */
+
+  .outer{
+    border: 4px dotted black;
+    width:  50%;
+    height: 150px;
+	margin: auto;
+	white-space: nowrap;
+	overflow: hidden;
+  } 
+
+
+  /* var parent = HTMLDivElement.prototype;
+
+  parent.marqueAlex = function(speed){
+	  var userDiv = this;
+	  var animationSpeed = speed;
+	  var userWidth = parseInt(getComputedStyle(userDiv).width,10);   //console.log(userWidth);
+	  var userHeight = parseInt(getComputedStyle(userDiv).height,10);  
+	  var str = userDiv.innerHTML;
+	  var animateString = 0;
+	_userDivRestyling = function(){
+		  userDiv.style.position = 'relative';
+		  userDiv.style.overflow = 'hidden';
+		  userDiv.innerHTML = "";
+	  }
+	  _userDivRestyling();
+  
+	  _innerOutCreation = function(){
+		   var innerOutDiv = document.createElement('div');
+		  innerOutDiv.className = 'innerOut';
+		  userDiv.insertBefore(innerOutDiv, userDiv.children[0]);
+		  document.querySelector('.innerOut').style.cssText = "white-space: nowrap;position: absolute;width:"+userWidth*2+"px;height:"+userHeight+"px;margin-left: 0px;"; 
+	   }
+	  _innerOutCreation(); var innerOut = document.querySelector('.innerOut');
+	  
+	  
+	_insertDiv = function(){
+		  var innerOut = document.querySelector('.innerOut');
+		   innerOut.style.marginLeft = 0 + 'px';
+		  var div = document.createElement('div');
+		  div.className = 'inner';
+		  div.innerHTML = str;
+		  innerOut.insertBefore(div, innerOut.children[0]);
+		  innerOut.firstChild.style.cssText = "position: relative;display:inline-block;width:"+userWidth+"px;height:"+userHeight+"px;margin: 0;padding: 0; ";
+	  }
+	  _insertDiv();	
+	  _insertDiv();
+  
+	  _timeCalculation = function(){
+		  return (userWidth*20)/animationSpeed;
+	  }
+	  _reanimate = function(){
+		  animateString = innerOut.animate([
+			  {marginLeft: '-'+userWidth+'px'},
+			  {marginLeft: '0px'}
+		  ], { 
+			  duration: _timeCalculation(),
+			  iterations: 1,
+			  }); 
+			  return animateString;
+	  }
+	  animateString = _reanimate();
+	  animateString.pause();
+   
+	  _animationEnd = function() {
+		  animateString.onfinish = function() { 
+			  _reanimate();
+			  return _animationEnd();
+		  };
+	  }
+	  _animationEnd();
+  
+	  window.onresize = function(){
+		  userWidth = parseInt(getComputedStyle(userDiv).width,10);
+		  animationTime = _timeCalculation();
+		  innerOut.style.width = ""+userWidth*2+"px";
+		  document.querySelector(".inner").style.width = ""+	+"px";
+		  innerOut.firstChild.style.width = ""+userWidth+"px";
+	  }
+  
+  
+	  document.querySelector(".but2").addEventListener('click', function(){
+		  animateString.pause();
+	  });
+  
+	  document.querySelector(".but3").addEventListener('click', function(){
+		  animateString.play();
+	  });
+	  
+  }
+   */
